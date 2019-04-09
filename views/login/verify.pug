@@ -1,0 +1,20 @@
+extends ../includes/layout_hero_full
+
+block content
+  include ../includes/messages.pug
+
+  .columns.is-mobile.is-centered
+    .column.is-half
+      h1.subtitle.is-size-2.has-text-weight-light.has-text-centered Verify
+      hr
+
+      form(method='post', action='/verify')
+        .field
+          .control.has-icons-left
+            input.input.is-large.has-text-centered(type='text' name='token' placeholder='000000')
+            span.icon.is-large.is-left
+              i.icon-key
+
+        .field
+          .control
+            button.button.is-large.is-primary.is-fullwidth(type='submit') Verify

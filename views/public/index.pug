@@ -1,0 +1,49 @@
+html
+	include ../includes/header.pug
+
+	body
+		include ../includes/nav.pug
+
+		section.hero.is-light(style='padding-top:60px;')
+
+			.hero-body
+				.container.is-desktop(style='min-height:314px;background-image:url("/img/swanson/350/Computing.png");background-repeat:no-repeat;background-position:right;')
+					div(style='max-width: 60%;')
+						h1.title.is-size-1(style='line-height:1.5;') Turtle Express Starter
+						h1.subtitle.is-size-2.has-text-weight-light.has-background-white(style='line-height:1.4;padding:15px;')
+							| A starter kit to bootstrap your TurtleCoin app development.
+						
+						.buttons
+							a.button.is-large.is-primary.is-outlined.is-hidden-mobile(href='/register' style='font-size:1.8em;')
+								span.icon.is-large
+									i.icon-rocket
+								span Get Started
+
+		section.hero.is-small
+			.hero-body(style='padding:20px 0 50px 0;')
+				.container.is-desktop
+					.columns.has-text-centered
+						.column
+							div(style='min-height:250px;background-image:url("/img/swanson/250/SuperTurtle.png");background-repeat:no-repeat;background-position:center;')
+							p.title.is-size-4
+								| Title One
+							hr
+							p.subtitle.is-italic.is-size-5.has-text-weight-light(style='line-height:1.8;')
+								| Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam vitae nibh ullamcorper, vestibulum elit quis, vestibulum enim. Etiam vulputate est nulla, at suscipit augue eleifend vel. Maecenas eget justo pulvinar, consectetur neque nec, tincidunt massa. 
+						.column
+							div(style='min-height:250px;background-image:url("/img/swanson/250/LazyFexra.png");background-repeat:no-repeat;background-position:center;')
+							p.title.is-size-4
+								| Title Two
+							hr
+							p.subtitle.is-italic.is-size-5.has-text-weight-light(style='line-height:1.8;')
+								| Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam vitae nibh ullamcorper, vestibulum elit quis, vestibulum enim. Etiam vulputate est nulla, at suscipit augue eleifend vel. Maecenas eget justo pulvinar, consectetur neque nec, tincidunt massa. 
+						.column
+							div(style='min-height:250px;background-image:url("/img/swanson/250/PlugandPlay.png");background-repeat:no-repeat;background-position:center;')
+							p.title.is-size-4
+								| Title Three
+							hr
+							p.subtitle.is-italic.is-size-5.has-text-weight-light(style='line-height:1.8;')
+
+								| Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam vitae nibh ullamcorper, vestibulum elit quis, vestibulum enim. Etiam vulputate est nulla, at suscipit augue eleifend vel. Maecenas eget justo pulvinar, consectetur neque nec, tincidunt massa. 
+
+		include ../includes/footer.pug

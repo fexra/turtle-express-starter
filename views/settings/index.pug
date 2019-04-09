@@ -1,0 +1,18 @@
+extends ../includes/layout_default
+
+block content
+  include includes/head
+  
+  .columns
+    .column
+      .box.has-background-white.has-text-centered
+        h1.subtitle Two Factor Authentication
+        if user.verified === 0
+          a.button.is-large.is-success.is-fullwidth(href='/settings/2fa/new') Add
+        else
+          a.button.is-large.is-danger.is-fullwidth(href='/settings/2fa/delete') Delete
+
+    .column
+      .box.has-background-white.has-text-centered
+        h1.subtitle Manage Password
+        a.button.is-large.is-dark.is-fullwidth(href='/settings/password') Change

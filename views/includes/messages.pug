@@ -1,0 +1,24 @@
+if message.success && message.success.length > 0
+  .notification.is-success.has-text-centered
+    button.delete(onclick='dismiss(this)')
+    | #{message.success}
+
+if message.error && message.error.length > 0
+  .notification.is-danger.has-text-centered
+    button.delete(onclick='dismiss(this)')
+    | #{message.error}
+
+if message.warning && message.warning.length > 0
+  .notification.is-warning.has-text-centered
+    button.delete(onclick='dismiss(this)')
+    | #{message.warning}
+
+if message.info && message.info.length > 0
+  .notification.is-info.has-text-centered
+    button.delete(onclick='dismiss(this)')
+    | #{message.info}
+
+if user && user.verified === 0
+  .notification.is-warning.has-text-centered
+    button.delete(onclick='dismiss(this)')
+    | Please enable 2FA to remove this message.

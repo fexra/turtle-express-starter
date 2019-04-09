@@ -1,0 +1,21 @@
+extends ../../includes/layout_default
+
+block content
+  include ../includes/head
+
+  form(method='post', action='/settings/2fa/delete')
+    .columns
+      .column
+        .box.has-background-white.has-text-centered
+
+          p.is-size-5 Are you sure you would like to decouple 2FA?
+          
+          br
+
+          .field
+            .control.has-icons-left
+              input.input.is-large.has-text-centered(type='text' name='token' placeholder='000000')
+              span.icon.is-large.is-left
+                i.icon-key
+
+    button.button.is-large.is-danger.is-fullwidth(type='submit') Decouple

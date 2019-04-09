@@ -1,0 +1,34 @@
+extends ../../includes/layout_default
+
+block content
+  include ../includes/head
+  
+  .columns
+    .column
+      .box.has-background-danger.has-text-centered
+        p.has-text-centered.is-size-5.has-text-white.has-text-weight-bold=secret
+  .columns
+    .column(style='display: flex;')
+      .box.has-background-white.has-text-centered(style="width:100%;")
+        span.is-size-5 Scan the QR code on the right with your device and verify by entering the provided token below. Make sure to record the <span class="has-text-danger">secret key</span> above in the <span class="has-text-danger">red</span> somewhere safe in case you lose access to your device.
+        hr
+        
+        form#form2FA(method='post', action='/settings/2fa/verify')
+          .field
+            .control.has-icons-left
+              input.input.is-large.has-text-centered(type='text' name='token' placeholder='000000')
+              span.icon.is-large.is-left
+                i.icon-key
+          .field
+            .control
+              button.button.is-large.is-primary.is-fullwidth(type='submit') Verify
+    
+    .column(style='display: flex;').is-one-quarter
+      .box.has-background-white.has-text-centered(style="width:100%;padding-top: 3.5em;")
+        img(src=qr)
+
+
+  .columns
+    .column
+      .box.has-background-danger.has-text-centered
+        p.has-text-centered.is-size-5.has-text-white.has-text-weight-bold=secret

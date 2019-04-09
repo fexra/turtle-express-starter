@@ -1,0 +1,59 @@
+extends ../includes/layout_hero_full
+
+block content
+
+  .columns.is-mobile.is-centered
+    .column.is-half
+      h1.subtitle.is-size-2.has-text-weight-light.has-text-centered Register
+      hr
+
+      include ../includes/messages.pug
+        
+      form(method='post', action='/register')
+        .field
+          .control.has-icons-left
+            input.input.is-large(type='text' name='name' placeholder='Username')     
+            span.icon.is-large.is-left
+              i.icon-user
+              
+        .field
+          .control.has-icons-left
+            input.input.is-large(type='email' name='email' placeholder='Email')
+            span.icon.is-large.is-left
+              i.icon-envelope
+
+        .field
+          .control.has-icons-left
+            input.input.is-large(type='password' name='password' placeholder='Password')
+            span.icon.is-large.is-left
+              i.icon-key
+
+        .field
+          .control.has-icons-left
+            input.input.is-large(type='password' name='confirm' placeholder='Confirm Password')
+            span.icon.is-large.is-left
+              i.icon-options
+
+        .field  
+          p.is-size-5.has-text-centered.has-text-weight-bold
+            span.has-text-danger Record your <span class="is-danger">recovery key</span> somewhere safe. This is the only way you will ever be able to recover your acount! 
+          br
+          input.input.is-medium(name='recovery' value=recovery readonly).has-text-centered.is-danger.is-size-5
+
+        br                
+        .field
+          .control
+            label.checkbox
+              input#verify.checkbox(type='checkbox', name='verify')
+              span.is-size-6.has-text-weight-bold    I have stored my recovery key somewhere safe.
+
+        hr
+
+        .field
+          .g-recaptcha(data-sitekey=recaptcha)
+
+        .field
+          .control
+            button.button.is-large.is-primary.is-fullwidth(type='submit') Register
+
+  script(src='https://www.google.com/recaptcha/api.js')

@@ -1,0 +1,34 @@
+extends ../includes/layout_hero_full
+
+block content
+
+  .columns.is-mobile.is-centered
+    .column.is-half
+      h1.subtitle.is-size-2.has-text-weight-light.has-text-centered Login
+      
+      hr
+
+      include ../includes/messages.pug
+
+      form(method='post', action='/login')
+        .field
+          .control.has-icons-left
+            input.input.is-large(type='email' name='email' placeholder='Email')
+            span.icon.is-large.is-left
+              i.icon-envelope
+
+        .field
+          .control.has-icons-left
+            input.input.is-large(type='password' name='password' placeholder='Password')
+            span.icon.is-large.is-left
+              i.icon-key
+
+        .field
+          .g-recaptcha(data-sitekey=recaptcha)
+
+        button.button.is-large.is-primary.is-fullwidth(type='submit') Login
+
+        hr
+        a.button.is-large.is-dark.is-fullwidth.is-outlined(href='/register') Register
+
+  script(src='https://www.google.com/recaptcha/api.js')

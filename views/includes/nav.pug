@@ -1,0 +1,44 @@
+nav.navbar.is-primary.is-fixed-top.is-boxed(role='navigation', aria-label='navigation')
+    .container
+        .navbar-brand
+            a.navbar-item.is-size-4.has-text-weight-light.has-background-white.has-text-dark(href='/')
+                div(style='background-image:url("/img/logo.png");background-repeat:no-repeat;background-position:left;padding: 0 0 0 48px;')
+                    | TRTL Express Starter
+            span.navbar-burger.burger(data-target='navbarMenu')
+                span
+                span
+                span
+        #navbarMenu.navbar-menu
+            if user && user.terms == true && session.verified == true
+                .navbar-start
+                    a.navbar-item(href='/')
+                        span.icon.is-large
+                            i.icon-grid.is-size-5
+                        span.is-size-5 Dashboard
+
+            .navbar-end
+                if user && user.terms == true && session.verified == true
+                    a.navbar-item.is-size-5.has-text-weight-semibold=user.name
+
+                    a.navbar-item(href='/settings')
+                        span.icon.is-large
+                            i.icon-settings.is-size-5
+
+                    a.navbar-item(href='/logout')
+                        span.icon.is-large
+                            i.icon-power.is-size-5
+
+                else if user && user.terms == false
+                    a.navbar-item(href='/logout')
+                        span.icon.is-large
+                            i.icon-power.is-size-5
+                else if user && session.verified == false
+                    a.navbar-item(href='/logout')
+                        span.icon.is-large
+                            i.icon-power.is-size-5
+                else
+                    a.navbar-item.is-size-6(href='/login').is-normal.is-hidden-touch
+                        button.button.is-light.is-outlined
+                            | Login
+                    a.navbar-item.is-size-6(href='/login').is-hidden-desktop.is-hidden-widescreen.is-hidden-fullhd
+                        | Login
