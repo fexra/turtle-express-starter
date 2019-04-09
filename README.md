@@ -30,7 +30,7 @@ Install dependencies:
 
 ```
 sudo apt update
-sudo apt install mariadb-server nodejs npm
+sudo apt install mariadb-server nodejs
 ```
 
 Create the database in the MariaDB command line:
