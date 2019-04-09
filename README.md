@@ -58,7 +58,7 @@ DB_HOST=localhost
 DB_PORT=3306
 DB_USER=root
 DB_PASS=yourdbpassword
-DB_NAME=yourdbname
+DB_NAME=mygaydatabase
 
 RABBITMQ_USER=
 RABBITMQ_PASS=
