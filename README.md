@@ -24,23 +24,59 @@ A boiler template for node.js using express.js for quick development. Comes with
 - Bulma 
 - Swanson Assets
 
-## Environment Variables
+## Setup
+
+Install dependencies: 
+
+```
+sudo apt update
+sudo apt install mariadb-server nodejs npm
+```
+
+Create the database in the MariaDB command line:
+
+```sql
+mysql -u root -p
+CREATE DATABASE mygaydatabase;
+exit
+```
+
+Copy the example .env file to .env and fill it out
+
+```
+cp .env-example .env
+```
+
+Here's an example of a completed env file:
 
 ```
 APP_PORT=8015
-APP_SECRET=
-APP_COOKIE_SECRET=
+APP_SECRET=appsecret
+APP_COOKIE_SECRET=appcookiesecret
 
 DB_HOST=localhost
 DB_PORT=3306
-DB_USER=
-DB_PASS=
-DB_NAME=
+DB_USER=root
+DB_PASS=yourdbpassword
+DB_NAME=yourdbname
 
 RABBITMQ_USER=
 RABBITMQ_PASS=
 
 RECAPTCHA_SITE_KEY=
 RECAPTCHA_SECRET_KEY=
+```
+
+Install the nodejs modules:
+
 
 ```
+npm i
+```
+Start the application:
+
+```
+npm start
+```
+
+The application will be served on whatever port you configured in .env for `APP_PORT`.
