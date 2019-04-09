@@ -26,6 +26,13 @@ A boiler template for node.js using express.js for quick development. Comes with
 
 ## Setup
 
+Clone the repository:
+
+```
+git clone https://github.com/fexra/turtle-express-starter mygayproject
+cd mygayproject
+```
+
 Install dependencies: 
 
 ```
@@ -47,7 +54,7 @@ Copy the example .env file to .env and fill it out
 cp .env-example .env
 ```
 
-Here's an example of a completed env file:
+Here's an example of a completed .env file:
 
 ```
 APP_PORT=8015
