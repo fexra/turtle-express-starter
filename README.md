@@ -8,6 +8,7 @@ A boiler template for node.js using express.js for quick development. Comes with
 - node.js 8+
 - knex.js compatible database
 - RabbitMQ (optional)
+- Recaptcha v2 Keys
 
 ## Includes
 - MVC framework - express.js 
@@ -53,8 +54,9 @@ mysql -u root -p
 CREATE DATABASE mydatabase;
 exit
 ```
+Sign up for and generate recaptcha keys [here](https://www.google.com/recaptcha/intro/v3.html).
 
-Copy the example .env file to .env and fill it out
+Copy the example .env file to .env and fill it out. All fields are required except the RABBITMQ fields.
 
 ```
 cp .env-example .env
