@@ -87,3 +87,8 @@ npm start
 ```
 
 The application will be served on whatever port you configured in .env for `APP_PORT`.
+
+## Useful Links
+* Node.js documentation: https://nodejs.org/en/docs/
+* Knex.js documentation: https://knexjs.org/
+* Turtlecoin-rpc documentation: https://api-docs.turtlecoin.lol/
