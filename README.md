@@ -54,7 +54,7 @@ mysql -u root -p
 CREATE DATABASE mydatabase;
 exit
 ```
-Sign up for and generate recaptcha keys [here](https://www.google.com/recaptcha/intro/v3.html).
+Sign up for and generate recaptcha keys [here](https://www.google.com/recaptcha/intro/v3.html). Only recaptcha v2 is supported, do not select v3.
 
 Copy the example .env file to .env and fill it out. All fields are required except the RABBITMQ fields.
 
