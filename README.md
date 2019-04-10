@@ -29,8 +29,8 @@ A boiler template for node.js using express.js for quick development. Comes with
 Clone the repository:
 
 ```
-git clone https://github.com/fexra/turtle-express-starter mygayproject
-cd mygayproject
+git clone https://github.com/fexra/turtle-express-starter myproject
+cd myproject
 ```
 
 Install dependencies: 
@@ -44,7 +44,7 @@ Create the database in the MariaDB command line:
 
 ```sql
 mysql -u root -p
-CREATE DATABASE mygaydatabase;
+CREATE DATABASE mydatabase;
 exit
 ```
 
@@ -65,7 +65,7 @@ DB_HOST=localhost
 DB_PORT=3306
 DB_USER=root
 DB_PASS=yourdbpassword
-DB_NAME=mygaydatabase
+DB_NAME=mydatabase
 
 RABBITMQ_USER=
 RABBITMQ_PASS=
