@@ -76,8 +76,8 @@ DB_NAME=mydatabase
 RABBITMQ_USER=
 RABBITMQ_PASS=
 
-RECAPTCHA_SITE_KEY=
-RECAPTCHA_SECRET_KEY=
+RECAPTCHA_SITE_KEY=recaptchaapikeyhere
+RECAPTCHA_SECRET_KEY=recaptchasecretkeyhere
 ```
 
 Install the nodejs modules:
