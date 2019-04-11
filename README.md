@@ -35,25 +35,16 @@ cd myproject
 ```
 
 Install dependencies: 
-
-```
-sudo apt update
-sudo apt install mariadb-server nodejs npm
-```
-
-Run the interactive secure installation tool for MariaDB.
-
-```
-sudo mysql_secure_installation
-```
+* [MariaDB installation instructions](https://downloads.mariadb.org/mariadb/repositories/#mirror=digitalocean-nyc&distro=Ubuntu&distro_release=bionic--ubuntu_bionic&version=10.3)
+* [MariaDB configuration instructions](https://mariadb.com/kb/en/library/getting-installing-and-upgrading-mariadb/)
+* [NodeJS installation instructions](https://nodejs.org/en/download/package-manager/) 
 
 Create the database in the MariaDB command line:
 
 ```sql
-sudo mysql -u root -p
 CREATE DATABASE mydatabase;
-exit
 ```
+
 Sign up for and generate recaptcha keys [here](https://www.google.com/recaptcha/intro/v3.html). Only recaptcha v2 is supported, do not select v3.
 
 Copy the example .env file to .env and fill it out. All fields are required except the RABBITMQ fields.
