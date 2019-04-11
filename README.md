@@ -44,13 +44,13 @@ sudo apt install mariadb-server nodejs npm
 Run the interactive secure installation tool for MariaDB.
 
 ```
-mysql_secure_installation
+sudo mysql_secure_installation
 ```
 
 Create the database in the MariaDB command line:
 
 ```sql
-mysql -u root -p
+sudo mysql -u root -p
 CREATE DATABASE mydatabase;
 exit
 ```
